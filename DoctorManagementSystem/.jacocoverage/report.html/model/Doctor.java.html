@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Doctor.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;DoctorManagementSystem&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">Doctor.java</span></div><h1>Doctor.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package model;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ *
+ * @author ASUS
+ */
+public class Doctor implements Comparable&lt;Doctor&gt;{
+    int id;
+    String name;
+    Date dateOfBirth;
+    String specialization;
+    int availability;
+    String email;
+    String mobile;
+
+<span class="nc" id="L24">    public Doctor() {</span>
+<span class="nc" id="L25">    }</span>
+
+<span class="fc" id="L27">    public Doctor(int id, String name, Date dateOfBirth, String specialization, int availability, String email, String mobile) {</span>
+<span class="fc" id="L28">        this.id = id;</span>
+<span class="fc" id="L29">        this.name = name;</span>
+<span class="fc" id="L30">        this.dateOfBirth = dateOfBirth;</span>
+<span class="fc" id="L31">        this.specialization = specialization;</span>
+<span class="fc" id="L32">        this.availability = availability;</span>
+<span class="fc" id="L33">        this.email = email;</span>
+<span class="fc" id="L34">        this.mobile = mobile;</span>
+<span class="fc" id="L35">    }</span>
+
+    public int getId() {
+<span class="fc" id="L38">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L42">        this.id = id;</span>
+<span class="nc" id="L43">    }</span>
+
+    public String getName() {
+<span class="fc" id="L46">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L50">        this.name = name;</span>
+<span class="nc" id="L51">    }</span>
+
+    public Date getDateOfBirth() {
+<span class="fc" id="L54">        return dateOfBirth;</span>
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+<span class="nc" id="L58">        this.dateOfBirth = dateOfBirth;</span>
+<span class="nc" id="L59">    }</span>
+
+    public String getSpecialization() {
+<span class="nc" id="L62">        return specialization;</span>
+    }
+
+    public void setSpecialization(String specialization) {
+<span class="nc" id="L66">        this.specialization = specialization;</span>
+<span class="nc" id="L67">    }</span>
+
+    public int getAvailability() {
+<span class="nc" id="L70">        return availability;</span>
+    }
+
+    public void setAvailability(int availability) {
+<span class="nc" id="L74">        this.availability = availability;</span>
+<span class="nc" id="L75">    }</span>
+
+    public String getEmail() {
+<span class="nc" id="L78">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="nc" id="L82">        this.email = email;</span>
+<span class="nc" id="L83">    }</span>
+
+    public String getMobile() {
+<span class="nc" id="L86">        return mobile;</span>
+    }
+
+    public void setMobile(String mobile) {
+<span class="nc" id="L90">        this.mobile = mobile;</span>
+<span class="nc" id="L91">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L95">        SimpleDateFormat sdf = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
+<span class="fc" id="L96">        return &quot;Doctor{&quot; + &quot;id=&quot; + id + &quot;, name=&quot; + name + &quot;, dateOfBirth=&quot; + sdf.format(dateOfBirth) + &quot;, specialization=&quot; + specialization + &quot;, availability=&quot; + availability + &quot;, email=&quot; + email + &quot;, mobile=&quot; + mobile + '}';</span>
+    }
+
+    @Override
+    public int compareTo(Doctor o) {
+<span class="fc" id="L101">       return this.getDateOfBirth().compareTo(o.getDateOfBirth());</span>
+    }
+    
+
+   
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
